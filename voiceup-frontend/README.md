@@ -1,12 +1,43 @@
-# React + Vite
+VoiceUp – Compliance & Emotion Detection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a full-stack web application that analyzes customer-agent conversations for emotional tone and compliance with predefined rules. It provides an interactive dashboard to visualize compliance percentages, emotion distributions and violated rules.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display of multiple conversations
+- Analyze each conversation for:
+  - Emotion classification (happy, angry, neutral)
+  - Compliance scoring
+  - Violation summaries
+- Dashboard with:
+  - Compliance vs. non-compliance chart
+  - Emotion distribution chart
+  - Top violated rules chart
+- Ability to filter emotions and reset analysis data
+- Responsive UI with clean layout
 
-## Expanding the ESLint configuration
+Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Frontend: React, Vite, Recharts
+- Backend: Flask, SQLAlchemy, TextBlob
+- Database: PostgreSQL 
+
+Steps to run the application:
+
+1. Start Flask server:
+- python app.py
+
+It will run at: http://127.0.0.1:5000
+
+2. Navigate to frontend folder:
+- cd voiceup-frontend
+
+3. Install Dependencies
+- npm install
+
+4. Start Vite server
+- npm run dev
+
+App will run at: http://localhost:5173
+
+
